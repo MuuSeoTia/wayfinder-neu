@@ -1,0 +1,46 @@
+{
+    "collections": {
+      "buildings": {
+        "fields": {
+          "name": "string",
+          "address": "string",
+          "coordinates": {
+            "latitude": "number",
+            "longitude": "number"
+          },
+          "mapImageUrl": "string"
+        }
+      },
+      "floors": {
+        "fields": {
+          "buildingId": "reference",
+          "floorNumber": "number",
+          "mapImageUrl": "string"
+        }
+      },
+      "locations": {
+        "fields": {
+          "floorId": "reference",
+          "name": "string",
+          "type": "string",
+          "coordinates": {
+            "latitude": "number",
+            "longitude": "number"
+          }
+        }
+      },
+      "paths": {
+        "fields": {
+          "fromLocationId": "reference",
+          "toLocationId": "reference",
+          "pathPoints": [
+            {
+              "latitude": "number",
+              "longitude": "number"
+            }
+          ]
+        }
+      }
+    }
+  }
+  
